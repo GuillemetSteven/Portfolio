@@ -375,6 +375,8 @@ h3 {
   background-size: 400% 400%;
   animation: gradientAnimation 4s ease infinite;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /* transform: rotate(1.5deg);
+  transition: transform 0.3s ease;  */
 }
 
 .card-content {
@@ -409,8 +411,8 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 48px;
+  height: 48px;
   padding: 0.5em;
   background-color: transparent;
   text-decoration: none;
@@ -418,15 +420,14 @@ h3 {
 
 .detail-link:hover {
   cursor: pointer;
-  background-color: var(--card-foreground);
+  background-color: var(--purple-100);
   border-radius: 50%;
 }
 
 .detail-icon {
-  width: 24px;
-  height: 24px;
-  /* color: var(--primary); */
-  fill: var(--primary);
+  width: 28px;
+  height: 28px;
+  fill: var(--card-foreground);
 }
 
 .card-content h3 {
@@ -536,6 +537,36 @@ h3 {
     width: 72.1875rem;
   }
 }
+
+/* TESTESTEST */
+
+.card {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.detail-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .detail-icon {
+  transform: scale(1.5);
+}
+
+.detail-icon:hover:after {
+  content: "Cliquez pour en savoir plus";
+  display: block;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--card);
+  color: var(--card-foreground);
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+/* TESTESTEST */
 
 /* FORM ET FOOTER */ /* FORM ET FOOTER */ /* FORM ET FOOTER */
 

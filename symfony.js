@@ -4,7 +4,7 @@ const commands = [
     images: [
       'images_projets_2/admin_page.png',
     ],
-    description: 'Interface from an admin point of view'
+    description: 'The Admin Page is designed to provide complete control and management of the website. From this page, the admin can assign and revoke user rights, edit and delete articles, and even delete users. The page is intuitive and easy to use, allowing the admin to efficiently manage the website'
   },
   {
     command: 'Managing articles',
@@ -14,7 +14,7 @@ const commands = [
       'images_projets_2/new_article_result.png',
       'images_projets_2/edited_article.png'
     ],
-    description: 'how I managed the articles'
+    description: 'The Managing articles command shows how the admin can interact with the articles on the website. The admin can completely edit an article, including changing the title, content, and featured image. This command demonstrates the ease and flexibility of the article management system.'
   },
   {
     
@@ -23,7 +23,7 @@ const commands = [
       'images_projets_2/profile_page.png',
       'images_projets_2/edited_profile.png',
     ],
-    description: 'Profile PAGE'
+    description: 'Profile page where users can customize their experience on our site. They can add photos, personal and professional information, and much more. We have designed this page to be easy to use and update.'
   },
   {
     
@@ -33,7 +33,7 @@ const commands = [
       'images_projets_2/comments_replied.png',
       'images_projets_2/new_comment.png',
     ],
-    description: 'Comments system'
+    description: 'Our comment system is designed to allow users to communicate easily and efficiently with each other. It includes features such as replying to comments and adding new comments.'
   },
   {
     
@@ -43,7 +43,7 @@ const commands = [
       'images_projets_2/search_system.png',
       'images_projets_2/search_system_when_nothing.png',
     ],
-    description: 'Home Page & Search system'
+    description: 'The home page is the first thing users see when they access our site. Our search system allows users to search for specific articles and displays the results in a clear and organized manner.'
   }
 ];
 

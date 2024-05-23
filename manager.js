@@ -6,7 +6,7 @@ const commands = [
       'images_projets_3/1.2.JPG',
       'images_projets_3/1.3.JPG'
     ],
-    description: 'Description for command 113'
+    description: 'The first command : ./main -c "/bin/date" -o output.txt -i 3 -n 4  is using the task manager program to execute the command /bin/date (which prints the current date and time) every 3 seconds, for a total of 4 times. The output of each execution is saved to a file named output.txt.'
   },
   {
     command: './main -c "/bin/ls -l" -i 2 -n 2 -o test.txt',
@@ -15,7 +15,7 @@ const commands = [
       'images_projets_3/2.1.JPG',
       'images_projets_3/2.2.JPG'
     ],
-    description: 'Description for command 2'
+    description: 'The second command : ./main -c "/bin/ls -l" -i 2 -n 2 -o test.txt  is using the task manager program to execute the command /bin/ls -l (which lists the files and directories in the current directory in a long format) every 2 seconds, for a total of 2 times. The output of each execution is saved to a file named test.txt.'
   },
   {
     // la taille change car commande trop longue, régler problème plus tard
@@ -25,7 +25,7 @@ const commands = [
       'images_projets_3/3.1.JPG',
       'images_projets_3/3.2.JPG'
     ],
-    description: 'Description for command 3'
+    description: 'The third command : ./main -c "/bin/ls -l" -w /cygdrive/e/aA_Training_ground/dessins_oui -o output.txt  is using the task manager program to execute the command /bin/ls -l (which lists the files and directories in the specified directory in a long format) every time the specified file or directory changes. The output of each execution is saved to a file named output.txt. The specified file or directory is /cygdrive/e/aA_Training_ground/dessins_oui.'
   }
 ];
 

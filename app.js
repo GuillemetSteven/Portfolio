@@ -1,20 +1,15 @@
+//app.js
 function setActiveLink(event) {
-  event.preventDefault(); 
-
-  const navBarHeight = 200; // jouer avec ce nombre pour la hauteur 
-  const targetId = event.target.getAttribute('href'); 
-  const targetElement = document.querySelector(targetId); 
-  const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset; 
-
-  window.scrollTo({ top: targetPosition - navBarHeight, behavior: 'smooth' }); 
-
-
+  event.preventDefault();
+  const navBarHeight = 200;
+  const targetId = event.target.getAttribute('href');
+  const targetElement = document.querySelector(targetId);
+  const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+  window.scrollTo({ top: targetPosition - navBarHeight, behavior: 'smooth' });
 }
 
-//TODO SI L'ENVOIE EST FAIT ALORS ACTUALLISE PAGE ET DANS L'AVENIR CREER UNE NOTIFICATION EN BAS A droite comme quoi c bon
-
 document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault(); // Empêche l'envoi par défaut du formulaire
+  event.preventDefault(); // Prevent the default form submission
 
   let isValid = true;
 
@@ -22,14 +17,14 @@ document.getElementById('contact-form').addEventListener('submit', function(even
   const emailInput = document.getElementById('email');
   const messageInput = document.getElementById('message');
 
-  // Réinitialisation des erreurs
+  // Reset error messages
   document.querySelectorAll('.error-message').forEach(e => {
     e.textContent = '';
     e.classList.remove('visible');
   });
   document.querySelectorAll('input, textarea').forEach(e => e.classList.remove('error'));
 
-  // Validation du nom
+  // Validate name
   if (nameInput.value.trim() === '') {
     isValid = false;
     const errorElement = document.getElementById('name-error');
@@ -38,8 +33,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     nameInput.classList.add('error');
   }
 
-  // Validation de l'email
-  //Si le champ est de nouveau vide, alors retirer l'erreur  ! [JE DOIS LE CODER CA]
+  // Validate email
   const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
   if (!emailPattern.test(emailInput.value)) {
     isValid = false;
@@ -49,7 +43,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     emailInput.classList.add('error');
   }
 
-  // Validation du message
+  // Validate message
   if (messageInput.value.trim().length < 10) {
     isValid = false;
     const errorElement = document.getElementById('message-error');
@@ -58,25 +52,13 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     messageInput.classList.add('error');
   }
 
-  // Si tout est valide, envoyer l'email
+  // If all fields are valid, proceed to send the email
   if (isValid) {
-    sendEmail(nameInput.value, emailInput.value, messageInput.value);
+    const templateParams = {
+      from_name: nameInput.value,
+      from_email: emailInput.value,
+      message: messageInput.value,
+    };
+    sendEmail(templateParams);
   }
 });
-
-
-//TODO A UTILISER CRER COMPTE ETC !  
-function sendEmail(name, email, message) {
-  // Utilisation de EmailJS pour envoyer les emails
-  emailjs.init('YOUR_USER_ID'); // Remplacez par votre user ID EmailJS
-
-  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-    name: name,
-    email: email,
-    message: message
-  }).then((response) => {
-    alert('Message envoyé avec succès !');
-  }, (error) => {
-    alert('Erreur lors de l\'envoi du message : ' + error);
-  });
-}
