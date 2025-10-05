@@ -1,0 +1,23 @@
+.footer-footer {
+  background-color: var(--background);
+  color: var(--foreground);
+  text-align: center;
+  padding: 1em 0;
+  width: 100%;
+  font-size: 1.6rem;
+  border-top: 1px solid var(--card);
+}
+
+/* Tablet */
+@media (min-width: 481px) {
+  .footer-footer {
+    font-size: 1.8rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .footer-footer {
+    font-size: 2rem;
+  }
+}

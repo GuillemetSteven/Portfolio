@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Roboto:ital@1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 600;
+}
+
+/* Définir la police pour les textes */
+p,
+ul,
+ol,
+li,
+span,
+div {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+:root {
+  --background: hsl(240, 13.73%, 10%);
+  --background-2: hsl(240, 14%, 25%);
+  --foreground: hsl(229.76, 31.78%, 74.71%);
+  --primary: hsl(0, 0%, 90.75%);
+  --primary-hover: hsl(0, 0%, 82.75%);
+  --primary-foreground: hsl(0, 0%, 20%);
+  --secondary: hsl(225.45, 71.22%, 72.75%);
+  --ring: hsl(225.45, 71.22%, 72.75%);
+  --destructive: hsl(1.58, 47.5%, 52.94%);
+}
+
+.project-intro {
+  padding: 2rem;
+  margin: 2rem auto;
+}
+
+.section-title,
+.project-title {
+  margin-bottom: 3rem;
+}
+
+.project-details h1 {
+  font-size: 3.4rem;
+  color: var(--primary);
+}
+
+.project-details h2 {
+  font-size: 2.5rem;
+  color: var(--ring);
+  margin-top: 2rem;
+}
+
+.feature-list,
+.improvements-list,
+.expected-work-list {
+  list-style-type: none;
+  padding-left: 2rem;
+}
+
+.feature-list li,
+.improvements-list li,
+.expected-work-list li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 20px;
+  font-size: 1.8rem;
+}
+
+.feature-list li::before,
+.improvements-list li::before,
+.expected-work-list li::before {
+  content: "•";
+  color: var(--primary);
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.main-container-2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.centered-content-2 {
+  width: 80%;
+  max-width: 1400px;
+  min-width: 320px;
+}
+
+/* pour border-bottom, dès que je scroll vers le abs, elle se surpime! */
+.header-2 {
+  display: flex;
+  align-items: center;
+  padding: 4rem 0 0 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  /* border-bottom: 1px solid var(--card); */
+}
+
+/* .detail-link {
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.detail-link:hover {
+  cursor: pointer;
+  background-color: var(--card-foreground);
+  border-radius: 50%;
+}
+
+.detail-icon {
+  transform: scale(1.5);
+  fill: var(--primary);
+} */
+
+.project-details p {
+  font-size: 1.8rem;
+  color: var(--card-foreground);
+}
+
+.screenshot {
+  margin-top: 1.5rem;
+}
+
+.screenshot img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.screenshot p {
+  font-size: 1.6rem;
+  color: var(--primary);
+}
+
+/* GRID GRID GRID  */
+
+.project-screenshots {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.project-screenshots h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.command {
+  color: var(--ring);
+  font-size: 2rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.carousel-inner {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  position: relative;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  border: none;
+  color: var(--primary-foreground);
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+.carousel-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.command-description {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: var(--foreground);
+}
+
+.command-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* FOOTER FOOTER FOOTER */
+
+.project-demo {
+  padding: 4rem 4% 4rem;
+}
+
+.image-counter {
+  position: absolute;
+  top: 5px;
+  left: -100px;
+  background-color: var(--ring);
+  color: var(--card);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  margin: 0 auto;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

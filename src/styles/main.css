@@ -1,0 +1,20 @@
+/* === Base Styles === */
+@import 'base/variables.css';
+@import 'base/reset.css';
+@import 'base/typography.css';
+
+/* === Layouts === */
+@import 'layouts/main.css';
+
+/* === Components === */
+@import 'components/header.css';
+@import 'components/hero.css';
+@import 'components/cards.css';
+@import 'components/skills.css';
+@import 'components/form.css';
+@import 'components/footer.css';
+
+/* === Pages === */
+@import 'pages/symfony.css';
+@import 'pages/figma.css';
+@import 'pages/task-manager.css';

@@ -1,0 +1,28 @@
+:root {
+  --background: hsl(240, 13.73%, 10%);
+  --background-2: hsl(240, 14%, 25%);
+  --foreground: hsl(229.76, 31.78%, 74.71%);
+  --muted: hsl(232.5, 15.44%, 18.32%);
+  --muted-foreground: hsl(233.79, 11.37%, 50%);
+  --popover: hsl(234.55, 17.46%, 12.35%);
+  --popover-foreground: hsl(234, 12.4%, 52.55%);
+  --card: hsl(234.55, 17.46%, 12.35%);
+  --card-foreground: hsl(229.76, 31.78%, 74.71%);
+  --border: hsl(232.5, 15.38%, 30.59%);
+  --input: hsl(232, 20%, 14.71%);
+  --primary: hsl(0, 0%, 90.75%);
+  --primary-hover: hsl(0, 0%, 82.75%);
+  --primary-foreground: hsl(0, 0%, 20%);
+  --secondary: hsl(225.45, 71.22%, 72.75%);
+  --secondary-foreground: hsl(234.55, 17.46%, 12.35%);
+  --accent: hsl(234.55, 17.83%, 9.47%);
+  --destructive: hsl(1.58, 47.5%, 52.94%);
+  --destructive-foreground: hsl(210, 40%, 98.04%);
+  --ring: hsl(225.45, 71.22%, 72.75%);
+  --ring-dark: hsl(225.45, 71.22%, 40%);
+  --color1: hsl(183, 84%, 49%);
+  --color2: hsl(262, 61%, 55%);
+  --purple-500: #9333ea;
+  --purple-100: #f0eff2;
+  --red: red;
+}

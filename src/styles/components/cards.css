@@ -1,0 +1,148 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.card {
+  background: linear-gradient(135deg, var(--color1), var(--color2));
+  border-radius: 15px;
+  padding: 2px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.card:hover {
+  background-size: 400% 400%;
+  animation: gradientAnimation 4s ease infinite;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border-radius: 13px;
+  padding: 17px;
+  text-align: left;
+  color: var(--card-foreground);
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header time {
+  display: block;
+  font-size: 1.4em;
+  color: var(--muted-foreground);
+}
+
+.detail-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0.5em;
+  background-color: transparent;
+  text-decoration: none;
+}
+/* ici le changement */
+.detail-link:hover {
+  cursor: pointer;
+  background-color: var(--purple-100);
+  border-radius: 50%;
+}
+
+.card-content:hover .detail-icon {
+  transform: scale(2.2);
+}
+
+.detail-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--card-foreground);
+  transition: transform 0.3s ease-in-out;
+}
+
+.detail-icon:hover:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--red);
+  color: var(--card-foreground);
+  padding: 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.card-content h3 {
+  margin: 10px 0;
+  font-size: 2em;
+  color: var(--muted-foreground);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: var(--ring);
+  color: var(--card);
+  border-radius: 9999px;
+  padding: 0.25rem 0.625rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Tablet */
+@media (min-width: 481px) {
+  .card {
+    width: calc(50% - 12px);
+  }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .card {
+    width: calc(33.333% - 16px);
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1201px) {
+  .card {
+    width: 30%;
+  }
+}

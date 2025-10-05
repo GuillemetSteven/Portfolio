@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="../../styles/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../../assets/icons/icons_web-removebg-preview.png">
+  <title>task manager </title>
+</head>
+
+<body>
+  <div class="main-container-2" id="home">
+
+    <div class="centered-content-2">
+
+      <header class="header-2">
+        <a href="../index.html" class="detail-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="detail-icon">
+            <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"
+              fill="var(--primary)" />
+          </svg>
+        </a>
+      </header>
+
+
+      <main class="main-container">
+        <div class="project-details centered-content">
+          <h1>Task Manager</h1>
+
+          <section class="project-intro">
+
+            <h2 class="project-title">Deferred Task Manager: program for scheduled execution of commands in UNIX/Linux
+            </h2>
+            <ul class="feature-list">
+              <li>Dynamically provide command, delay between executions, and number of iterations</li>
+              <li>Avoid "time drift" by considering execution time and task management time</li>
+            </ul>
+
+            <h2 class="section-title">Expected work:</h2>
+            <ul class="expected-work-list">
+              <li>Zip archive with project directory, sources (.c and .h), makefile, README, and 1-2 page document</li>
+              <li>Names of team members, mode of work, task distribution, time spent, solution explanation, encountered
+                difficulty and solution, project limits</li>
+              <li>Compilable, clean, and functional sources using only specified libraries</li>
+              <li>Delivery within corrector's deadlines</li>
+            </ul>
+
+            <h2 class="section-title">Improvements for final version:</h2>
+            <ul class="improvements-list">
+              <li>Command-line mode ✅</li>
+              <li>Configuration file mode ✅</li>
+              <li>Single or multiple executions ✅</li>
+              <li>Choice of executable or execution directory ✅</li>
+              <li>Infinite repetition with log file and ability to stop ✅</li>
+            </ul>
+          </section>
+
+          <section class="project-screenshots">
+            <h2>List of few commands</h2>
+            <div class="carousel">
+              <div class="carousel-content">
+                <span class="command">./main -c "/bin/date" -o output.txt -i 3 -n 4</span>
+                <div class="image-counter">Image 1 of 1</div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../../assets/images/projects/task-manager/1.JPG" alt="Screenshot 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../../assets/images/projects/task-manager/1.2.JPG" alt="Screenshot 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../../assets/images/projects/task-manager/1.3.JPG" alt="Screenshot 3">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-buttons">
+                <button id="prev" class="form-button">Prev</button>
+                <button id="next" class="form-button">Next</button>
+              </div>
+            </div>
+            <div class="command-buttons">
+              <button id="command1" class="form-button">Command 1</button>
+              <button id="command2" class="form-button">Command 2</button>
+              <button id="command3" class="form-button">Command 3</button>
+            </div>
+            <p class="command-description">Description for command 1</p>
+          </section>
+
+          <section class="project-demo">
+            <h2>Live demo</h2>
+
+            <div class="video-container"">
+              <video id=" demo-video" width="100%" controls controlsList="nodownload">
+              <source src="../../assets/videos/task_manager.mp4" type="video/mp4">
+              Votre navigateur ne prend pas en charge la balise vidéo.
+              </video>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer-footer">
+        <p>&copy; 2024 [Guillemet Steven] - All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="../../scripts/pages/task-manager.js"></script>
+</body>
+
+</html>

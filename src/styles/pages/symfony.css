@@ -1,0 +1,71 @@
+:root {
+  --background: hsl(240, 13.73%, 10%);
+  --background-2: hsl(240, 14%, 25%);
+  --foreground: hsl(229.76, 31.78%, 74.71%);
+  --primary: hsl(0, 0%, 90.75%);
+  --primary-hover: hsl(0, 0%, 82.75%);
+  --primary-foreground: hsl(0, 0%, 20%);
+  --secondary: hsl(225.45, 71.22%, 72.75%);
+  --ring: hsl(225.45, 71.22%, 72.75%);
+  --destructive: hsl(1.58, 47.5%, 52.94%);
+  --card: hsl(234.55, 17.46%, 12.35%);
+  --accent: hsl(234.55, 17.83%, 9.47%);
+}
+
+.image-counter {
+  position: absolute;
+  top: 5px;
+  left: -100px;
+  background-color: var(--ring);
+  color: var(--card);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.footer-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.footer-line::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 3px solid var(--card);
+  transform: translateY(-50%);
+}
+
+.scroll-top-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  text-decoration: none;
+  z-index: 1;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.scroll-top-link:hover {
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+.scroll-top-link svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--primary-foreground);
+  transition: fill 0.3s ease;
+}
+
+.scroll-top-link:hover svg {
+  fill: var(--card);
+}

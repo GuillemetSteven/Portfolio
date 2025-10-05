@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Roboto:ital@1&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+p,
+ul,
+ol,
+li,
+span,
+div {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+p {
+  color: var(--muted-foreground);
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+span {
+  color: var(--secondary);
+}
+
+.primary-forground {
+  color: var(--secondary);
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, var(--color1), var(--color2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Tablet */
+@media (min-width: 481px) {
+  h1 {
+    font-size: 3.4rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+}

@@ -116,7 +116,7 @@ div {
   /* border-bottom: 1px solid var(--card); */
 }
 
-.detail-link {
+/* .detail-link {
   display: flex;
   align-items: center;
   padding: 0.5em;
@@ -133,7 +133,7 @@ div {
 .detail-icon {
   transform: scale(1.5);
   fill: var(--primary);
-}
+} */
 
 .project-details p {
   font-size: 1.8rem;
