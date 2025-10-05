@@ -1,0 +1,22 @@
+# Claude Code configuration and documentation
+.claude/
+CLAUDE.md
+
+# Sensitive configuration files
+config.js
+
+# Environment variables (if added in the future)
+.env
+.env.local
+.env.*.local
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
