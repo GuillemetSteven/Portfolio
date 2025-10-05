@@ -2,7 +2,7 @@
 .claude/
 CLAUDE.md
 
-# Sensitive configuration files
+
 config.js
 
 # Environment variables (if added in the future)
